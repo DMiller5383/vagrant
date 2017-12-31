@@ -21,11 +21,14 @@ service httpd start
 yum install -y php php-cli php-common php-devel php-mysql
 
 #MySQL
-yum install -y mysql myql-server mysql-devel
-chkconfig --add mysqld
-chkconfig mysqld on
+wget http://repo.mysql.com/mysql-community-release-el7-5.noarch.rpm
+rpm -ivh mysql-community-release-el7-5.noarch.rpm
+yum update -y
+yum install -y mysql-server
+#chkconfig --add mysqld
+#chkconfig mysqld on
+systemctl start mysqld
 
-service mysqld start
 
 mysql -u root -e "SHOW DATABASES";
 
