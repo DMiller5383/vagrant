@@ -21,7 +21,7 @@ service httpd start
 yum install -y php php-cli php-common php-devel php-mysql
 
 #MySQL
-MySql -y mysql myql-server mysql-devel
+yum install -y mysql myql-server mysql-devel
 chkconfig --add mysqld
 chkconfig mysqld on
 
