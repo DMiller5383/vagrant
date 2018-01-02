@@ -37,3 +37,4 @@ cd ~/sites/vagrant-test
 sudo -u vagrant wget -q https://raw.githubusercontent.com/DMiller5383/vagrant/master/files/index.html
 sudo -u vagrant wget -q https://raw.githubusercontent.com/DMiller5383/vagrant/master/files/info.php
 service httpd restart
+setenforce 0
